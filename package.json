@@ -4,9 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack",
-    "start": "webpack-dev-server --config webpack.config.dev.js --port 3000"
+    "start": "run-p start:api start:dev",
+    "start:dev": "webpack-dev-server --config webpack.config.dev.js --port 3000",
+    "prestart:api": "node tools/createMockDb.js",
+    "start:api": "node tools/apiServer.js"
   },
   "dependencies": {
     "bootstrap": "4.2.1",
@@ -83,6 +84,7 @@
       "jest": true
     },
     "rules": {
+      "import/no-named-as-default": "off",
       "no-debugger": "off",
       "no-console": "off",
       "no-unused-vars": "warn",

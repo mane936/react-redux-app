@@ -20,6 +20,9 @@ module.exports = {
     historyApiFallback: true, // all request will be sent to index.html, we can send deep links and all will be maanaged by router
   },
   plugins: [
+    new webpack.DefinePlugin({
+      "process.env.API_URL": JSON.stringify("http://localhost:3001"),
+    }),
     new HtmlWebpackPlugin({
       template: "src/index.html",
       favicon: "src/favicon.ico",
