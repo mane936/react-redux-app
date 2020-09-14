@@ -72,11 +72,11 @@
     },
     {
       "id": 11,
-      "title": "fas",
-      "authorId": 1,
-      "category": "asdf",
-      "createdAt": 1600072262479,
-      "slug": "fas"
+      "title": "asd",
+      "authorId": 2,
+      "category": "fds",
+      "createdAt": 1600081522798,
+      "slug": "asd"
     }
   ],
   "authors": [
